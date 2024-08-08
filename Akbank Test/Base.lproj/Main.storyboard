@@ -1,24 +1,437 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Akbank_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="akabank" translatesAutoresizingMaskIntoConstraints="NO" id="4uY-LA-SMz">
+                                <rect key="frame" x="36" y="174" width="321" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-Lv-aTb">
+                                <rect key="frame" x="36" y="480" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMY-ls-5JK">
+                                <rect key="frame" x="36" y="529" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quL-Hd-TEx">
+                                <rect key="frame" x="36" y="583" width="100" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjN-yg-rkD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AKBANK MOBİLE HOŞ GELDİNİZ 😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-IQ-q6b">
+                                <rect key="frame" x="36" y="397" width="321" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6U1-zS-C8e">
+                                <rect key="frame" x="257" y="583" width="100" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Kayıt Ol"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ogf-Cx-pV3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="f7G-VL-iad"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="OGI-Lv-aTb" id="M9S-Dh-adq"/>
+                        <outlet property="passwordTextField" destination="cMY-ls-5JK" id="aTR-7Q-WSp"/>
+                        <segue destination="rTL-kU-2bH" kind="show" identifier="toOtherBanksScreenVC" id="MJt-U6-bkR"/>
+                        <segue destination="XOB-Ym-bgF" kind="presentation" identifier="toRegisterVC" modalPresentationStyle="fullScreen" id="eLX-Cc-QLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2065" y="4"/>
+        </scene>
+        <!--Diğer Banka Hesapları-->
+        <scene sceneID="SJ8-73-AZO">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="zke-Jh-fhw" customClass="NewBanksViewController" customModule="Akbank_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4H-bW-RHk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eklenmiş Bankalar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVy-kb-Dc7">
+                                <rect key="frame" x="16" y="114" width="184" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-36-j2r">
+                                <rect key="frame" x="0.0" y="163" width="361" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="72f-wd-S5H">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="72f-wd-S5H" id="2JY-bl-TNM">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="akabank" translatesAutoresizingMaskIntoConstraints="NO" id="703-1P-fRK">
+                                <rect key="frame" x="-27" y="50" width="176" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ESq-i8-hZv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Diğer Banka Hesapları" image="square.grid.3x2" catalog="system" id="hPt-SE-IPE"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="NDb-3U-kNx">
+                        <barButtonItem key="rightBarButtonItem" image="plus.circle.fill" catalog="system" id="bGK-6K-f1i">
+                            <connections>
+                                <segue destination="HLU-5d-6AT" kind="show" id="yqJ-Cn-hgo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableview" destination="e2L-36-j2r" id="Sfc-Uf-1Xi"/>
+                        <segue destination="HLU-5d-6AT" kind="presentation" identifier="toNewAddBankVC" animates="NO" modalPresentationStyle="fullScreen" id="zhU-pd-pom"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3G2-Aq-qH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5606.8702290076335" y="-325.35211267605638"/>
+        </scene>
+        <!--New Add Bank View Controller-->
+        <scene sceneID="Uds-5M-Ygw">
+            <objects>
+                <viewController id="HLU-5d-6AT" customClass="NewAddBankViewController" customModule="Akbank_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4K-wf-lYY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lmp-Df-8yF">
+                                <rect key="frame" x="0.0" y="88" width="393" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="iwq-2q-M1K" customClass="CustomTableViewCell" customModule="Akbank_Test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwq-2q-M1K" id="3x7-iz-I8t">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n86-ud-TXS">
+                                                    <rect key="frame" x="20" y="0.0" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFf-Wc-vTP">
+                                                    <rect key="frame" x="68" y="-1" width="172" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconİmageView" destination="n86-ud-TXS" id="JKW-JF-7HM"/>
+                                            <outlet property="label" destination="SFf-Wc-vTP" id="q9u-cz-37j"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4E-wT-Rlm">
+                                <rect key="frame" x="0.0" y="44" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Yeni Banka Ekle" id="15E-e5-XTr"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kvg-Mv-cnU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OL0-f8-lgS"/>
+                    <connections>
+                        <outlet property="tableView" destination="Lmp-Df-8yF" id="7up-yf-FuG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wha-bg-Qbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6613" y="-325"/>
+        </scene>
+        <!--Transfer ve Ödemeler-->
+        <scene sceneID="jdi-Sj-Uio">
+            <objects>
+                <navigationController id="57q-l2-Wdo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Transfer ve Ödemeler" image="arrow.left.arrow.right" catalog="system" id="8NE-6a-oiM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eku-bQ-yzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mti-HS-Ofl" kind="relationship" relationship="rootViewController" id="4xR-Su-s1d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkx-YA-V3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4676" y="446"/>
+        </scene>
+        <!--Transfer ve ödemeler-->
+        <scene sceneID="7wb-pS-Cb8">
+            <objects>
+                <viewController id="mti-HS-Ofl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yec-eO-RwS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aS8-hh-g4p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Transfer ve ödemeler" image="arrow.left.arrow.right" catalog="system" id="CRP-gJ-nuP"/>
+                    <navigationItem key="navigationItem" id="oBi-WT-ZBP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEk-2E-rxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5711" y="446"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lfz-dO-qIk">
+            <objects>
+                <viewController id="nDa-No-EAv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frK-LV-q6K">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1k5-TG-OCg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dp1-82-GrG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WvP-i1-xda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5607" y="-1142"/>
+        </scene>
+        <!--Ana Sayfa-->
+        <scene sceneID="oAx-DT-aN2">
+            <objects>
+                <navigationController id="LJW-ys-pIq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ana Sayfa" image="house.fill" catalog="system" id="Mjk-ZQ-CbK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ThY-8T-YhU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nDa-No-EAv" kind="relationship" relationship="rootViewController" id="IGN-eQ-917"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdQ-Ws-bHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4677" y="-1142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IzF-lu-5ZS">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="rTL-kU-2bH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UeW-mC-Ecw"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="58B-WU-8sU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LJW-ys-pIq" kind="relationship" relationship="viewControllers" id="bHb-Jg-G8t"/>
+                        <segue destination="o2F-eT-FgN" kind="relationship" relationship="viewControllers" id="oUO-8b-n0q"/>
+                        <segue destination="57q-l2-Wdo" kind="relationship" relationship="viewControllers" id="G9r-m0-Gna"/>
+                        <segue destination="RGF-9Q-iYd" kind="relationship" relationship="viewControllers" id="INS-lu-3Kk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sd1-lW-5wv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3182.4427480916029" y="3.5211267605633805"/>
+        </scene>
+        <!--Kayıt Ol-->
+        <scene sceneID="a8P-HP-nZd">
+            <objects>
+                <viewController title="Kayıt Ol" modalPresentationStyle="fullScreen" id="XOB-Ym-bgF" customClass="RegisterViewController" customModule="Akbank_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmT-vP-K2e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İsim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-Ie-4Zd">
+                                <rect key="frame" x="36" y="132" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Soy isim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPV-gl-4Kc">
+                                <rect key="frame" x="36" y="185" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-lu-RbJ">
+                                <rect key="frame" x="36" y="238" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpX-97-jcF">
+                                <rect key="frame" x="36" y="291" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofw-Xn-zSs">
+                                <rect key="frame" x="146" y="358" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Kayıt Ol"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="XOB-Ym-bgF" eventType="touchUpInside" id="OqQ-ao-Xwp"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EMd-Mw-5Zh">
+                                <rect key="frame" x="0.0" y="43" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Kayıt Ol" id="2Qd-73-t4x">
+                                        <barButtonItem key="leftBarButtonItem" title="Back " id="bWC-gg-JdV">
+                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="XOB-Ym-bgF" id="7fZ-fk-XHX"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="toMainVC" id="15p-TI-9nk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QlR-OJ-xEP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LKk-6C-b6i"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="qc0-lu-RbJ" id="clI-8a-ZRa"/>
+                        <outlet property="nameTextField" destination="YUV-Ie-4Zd" id="P5W-rp-Zmr"/>
+                        <outlet property="passwordTextField" destination="zpX-97-jcF" id="Ri9-Ed-Uhc"/>
+                        <outlet property="surnameTextField" destination="aPV-gl-4Kc" id="WHM-Zt-Mw1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="je3-Rr-cPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2065" y="869"/>
+        </scene>
+        <!--Diğer Banka Hesapları-->
+        <scene sceneID="jvz-Xu-b8O">
+            <objects>
+                <navigationController id="o2F-eT-FgN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diğer Banka Hesapları" image="square.grid.3x2" catalog="system" id="1uR-Nl-W6N"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="69V-oh-MBS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" systemColor="systemRedColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zke-Jh-fhw" kind="relationship" relationship="rootViewController" id="YWq-6U-3Ax"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qke-fn-BgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4676" y="-325"/>
+        </scene>
+        <!--Senin İçin-->
+        <scene sceneID="sz6-yn-yJ6">
+            <objects>
+                <navigationController id="RGF-9Q-iYd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Senin İçin" image="star" catalog="system" id="JCf-dj-gSy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zci-AO-IeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gdE-mw-Zr2" kind="relationship" relationship="rootViewController" id="Oi4-Oa-OUh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoM-ji-xV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4676" y="1267"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SWS-Ss-089">
+            <objects>
+                <viewController id="gdE-mw-Zr2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cgW-l6-4pk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dy4-bY-IFv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nII-X7-fVF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HFK-dl-pMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5636" y="1267"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yqJ-Cn-hgo"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="akabank" width="1280" height="720"/>
+        <image name="arrow.left.arrow.right" catalog="system" width="120" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
