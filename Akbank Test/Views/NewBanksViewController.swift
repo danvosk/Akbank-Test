@@ -4,6 +4,7 @@
 //
 //  Created by Görkem Karagöz on 1.08.2024.
 //
+
 import UIKit
 import Firebase
 import DZNEmptyDataSet
@@ -18,7 +19,6 @@ class NewBanksViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +104,7 @@ class NewBanksViewController: UIViewController, UITableViewDelegate, UITableView
                             print("Error removing document: \(error)")
                         } else {
                             self.banks.remove(at: indexPath.row)
+                            self.shouldShowEmptyDataSet = self.banks.isEmpty
                             DispatchQueue.main.async {
                                 self.updateTableView()
                             }
