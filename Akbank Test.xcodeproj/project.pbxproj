@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C3565AEA2C5D20EC007B4F01 /* NewAddBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3565AE92C5D20EC007B4F01 /* NewAddBankViewController.swift */; };
 		C3565AEC2C611470007B4F01 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3565AEB2C61146F007B4F01 /* CustomTableViewCell.swift */; };
+		C398029C2C6C9DFA003B9F1D /* DZNEmptyDataSet in Frameworks */ = {isa = PBXBuildFile; productRef = C398029B2C6C9DFA003B9F1D /* DZNEmptyDataSet */; };
 		C3A0AF532C5ACE97008F5BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0AF522C5ACE97008F5BDA /* AppDelegate.swift */; };
 		C3A0AF552C5ACE97008F5BDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0AF542C5ACE97008F5BDA /* SceneDelegate.swift */; };
 		C3A0AF572C5ACE97008F5BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A0AF562C5ACE97008F5BDA /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 				C3CF79AB2C5BD277008958FB /* FirebaseAnalytics in Frameworks */,
 				C3CF79B32C5BD277008958FB /* FirebaseAppDistribution-Beta in Frameworks */,
 				C3CF79AF2C5BD277008958FB /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				C398029C2C6C9DFA003B9F1D /* DZNEmptyDataSet in Frameworks */,
 				C3CF79B92C5BD277008958FB /* FirebaseCrashlytics in Frameworks */,
 				C3CF79BB2C5BD277008958FB /* FirebaseDatabase in Frameworks */,
 				C3CF79C52C5BD277008958FB /* FirebaseFunctionsCombine-Community in Frameworks */,
@@ -203,6 +205,7 @@
 				C3CF79D22C5BD277008958FB /* FirebaseStorage */,
 				C3CF79D42C5BD277008958FB /* FirebaseStorageCombine-Community */,
 				C3CF79D62C5BD277008958FB /* FirebaseVertexAI-Preview */,
+				C398029B2C6C9DFA003B9F1D /* DZNEmptyDataSet */,
 			);
 			productName = "Akbank Test";
 			productReference = C3A0AF4F2C5ACE97008F5BDA /* Akbank Test.app */;
@@ -234,6 +237,7 @@
 			mainGroup = C3A0AF462C5ACE97008F5BDA;
 			packageReferences = (
 				C3CF79A92C5BD277008958FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C398029A2C6C9DFA003B9F1D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */,
 			);
 			productRefGroup = C3A0AF502C5ACE97008F5BDA /* Products */;
 			projectDirPath = "";
@@ -495,6 +499,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C398029A2C6C9DFA003B9F1D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dzenbot/DZNEmptyDataSet";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		C3CF79A92C5BD277008958FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -506,6 +518,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C398029B2C6C9DFA003B9F1D /* DZNEmptyDataSet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C398029A2C6C9DFA003B9F1D /* XCRemoteSwiftPackageReference "DZNEmptyDataSet" */;
+			productName = DZNEmptyDataSet;
+		};
 		C3CF79AA2C5BD277008958FB /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3CF79A92C5BD277008958FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="4"/>
+            <point key="canvasLocation" x="2065" y="75"/>
         </scene>
         <!--Diğer Banka Hesapları-->
         <scene sceneID="SJ8-73-AZO">
@@ -91,15 +91,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-36-j2r">
-                                <rect key="frame" x="0.0" y="163" width="361" height="186"/>
+                                <rect key="frame" x="0.0" y="163" width="393" height="612"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="72f-wd-S5H">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="72f-wd-S5H" id="2JY-bl-TNM">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -110,6 +110,10 @@
                                 <rect key="frame" x="-27" y="50" width="176" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="rWr-QR-dvs">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ESq-i8-hZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -125,13 +129,14 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="indicatorView" destination="rWr-QR-dvs" id="GRL-7A-1uB"/>
                         <outlet property="tableview" destination="e2L-36-j2r" id="Sfc-Uf-1Xi"/>
                         <segue destination="HLU-5d-6AT" kind="presentation" identifier="toNewAddBankVC" animates="NO" modalPresentationStyle="fullScreen" id="zhU-pd-pom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3G2-Aq-qH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5606.8702290076335" y="-325.35211267605638"/>
+            <point key="canvasLocation" x="2446.5648854961833" y="2634.5070422535214"/>
         </scene>
         <!--New Add Bank View Controller-->
         <scene sceneID="Uds-5M-Ygw">
@@ -192,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wha-bg-Qbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6613" y="-325"/>
+            <point key="canvasLocation" x="2447" y="3475"/>
         </scene>
         <!--Transfer ve Ödemeler-->
         <scene sceneID="jdi-Sj-Uio">
@@ -209,7 +214,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkx-YA-V3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4676" y="446"/>
+            <point key="canvasLocation" x="1653" y="1850"/>
         </scene>
         <!--Transfer ve ödemeler-->
         <scene sceneID="7wb-pS-Cb8">
@@ -226,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEk-2E-rxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5711" y="446"/>
+            <point key="canvasLocation" x="1653" y="2635"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Lfz-dO-qIk">
@@ -242,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvP-i1-xda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5607" y="-1142"/>
+            <point key="canvasLocation" x="3331" y="2635"/>
         </scene>
         <!--Ana Sayfa-->
         <scene sceneID="oAx-DT-aN2">
@@ -259,7 +264,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdQ-Ws-bHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4677" y="-1142"/>
+            <point key="canvasLocation" x="3331" y="1835"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IzF-lu-5ZS">
@@ -281,7 +286,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sd1-lW-5wv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3182.4427480916029" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2065" y="859"/>
         </scene>
         <!--Kayıt Ol-->
         <scene sceneID="a8P-HP-nZd">
@@ -362,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je3-Rr-cPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="869"/>
+            <point key="canvasLocation" x="3111" y="75"/>
         </scene>
         <!--Diğer Banka Hesapları-->
         <scene sceneID="jvz-Xu-b8O">
@@ -381,7 +386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qke-fn-BgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4676" y="-325"/>
+            <point key="canvasLocation" x="2447" y="1835"/>
         </scene>
         <!--Senin İçin-->
         <scene sceneID="sz6-yn-yJ6">
@@ -398,7 +403,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoM-ji-xV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4676" y="1267"/>
+            <point key="canvasLocation" x="871" y="1850"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SWS-Ss-089">
@@ -414,11 +419,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFK-dl-pMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5636" y="1267"/>
+            <point key="canvasLocation" x="871" y="2635"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yqJ-Cn-hgo"/>
+        <segue reference="zhU-pd-pom"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="akabank" width="1280" height="720"/>
@@ -431,7 +436,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
